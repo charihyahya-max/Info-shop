@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Info Shop | Accueil</title>
+  <meta name="description" content="Info Shop - Boutique en ligne moderne spécialisée dans les composants PC, laptops et accessoires informatiques au Maroc.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #f8f9fa;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    }
+
+    .navbar .nav-link.active {
+      font-weight: bold;
+      color: #fff !important;
+    }
+
+    /* HERO / CAROUSEL */
+    .carousel-inner img {
+      height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    /* CATEGORY */
+    .category img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      transition: transform .3s, border-color .3s;
+    }
+
+    .category img:hover {
+      transform: scale(1.15);
+      border-color: #0d6efd;
+    }
+
+    .category p {
+      margin-top: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* FEATURED PRODUCTS */
+    .card {
+      border: none;
+      border-radius: 12px;
+      transition: transform .3s, box-shadow .3s;
+      background: #fff;
+      box-shadow: 0 6px 15px rgba(0,0,0,.05);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,.12);
+    }
+
+    .card img {
+      height: 160px;
+      object-fit: contain;
+      padding: 15px;
+    }
+
+    .card-body h6 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .card-body p {
+      margin-bottom: 5px;
+    }
+
+    /* BADGE */
+    .badge-sale {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 0.8rem;
+      padding: 5px 8px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d6efd;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-cpu-fill me-1"></i> Info Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="signin.html">Sign In</a></li>
+        <li class="nav-item"><a class="nav-link" href="Panier.html">Mon Panier</a></li>
+      </ul>
+    <form action="search.html" method="get" class="d-flex">
+    <input type="text" name="q" class="form-control me-2" placeholder="Search...">
+    <button type="submit" class="btn btn-light"><i class="bi bi-search"></i></button>
+    </form>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO CAROUSEL -->
+<div id="carouselExample" class="carousel slide mt-3 container" data-bs-ride="carousel">
+  <div class="carousel-inner rounded">
+    <div class="carousel-item active">
+      <img src="téléchargement (1).jpg" class="d-block w-100" alt="Promo 1">
+    </div>
+    <div class="carousel-item">
+      <img src="téléchargement.jpg" class="d-block w-100" alt="Promo 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- CATEGORIES -->
+<section class="container my-5">
+  <h4 class="fw-bold mb-4">Catégories populaires</h4>
+  <div class="d-flex justify-content-between flex-wrap gap-3">
+    <div class="category text-center">
+      <a href="Laptop.html"><img src="images.png" alt="Laptop"></a>
+      <p>LAPTOP</p>
+    </div>
+    <div class="category text-center">
+      <a href="DESKTOP.html"><img src="desktop-computer-with-monitor-system-unit-and-mouse-isometric-illustration.webp" alt="Desktop"></a>
+      <p>DESKTOP</p>
+    </div>
+    <div class="category text-center">
+      <a href="CARTE MERE.html"><img src="images (1).png" alt="Carte mère"></a>
+      <p>CARTE MERE</p>
+    </div>
+    <div class="category text-center">
+      <a href="gpu.html"><img src="images (1).jpg" alt="GPU"></a>
+      <p>GPU</p>
+    </div>
+    <div class="category text-center">
+      <a href="ram.html"><img src="images.jpg" alt="RAM"></a>
+      <p>RAM</p>
+    </div>
+    <div class="category text-center">
+      <a href="cpu.html"><img src="pngtree-chip-cpu-microchip-processor-png-image_4108153.png" alt="CPU"></a>
+      <p>CPU</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="container my-5">
+  <h4 class="fw-bold mb-4">Meilleures offres</h4>
+  <div class="row g-4">
+
+    <div class="col-6 md-3">
+      <div class="card text-center position-relative">
+        <span class="badge bg-danger badge-sale">-10%</span>
+        <a href="HP_Pavilion16Laptop__AMD_NaturalSilver_desktop@2x.webp"><img src="HP_Pavilion16Laptop__AMD_NaturalSilver_desktop@2x.webp" alt="HP Pavilion"></a>
+        <div class="card-body">
+          <h6>HP Pavilion</h6>
+          <p class="text-success fw-bold">2999 DH</p>
+          <button class="btn btn-primary btn-sm w-100" 
+                  onclick="addToCart('HP Pavilion', 2999, 'HP_Pavilion16Laptop__AMD_NaturalSilver_desktop@2x.webp', this)">
+            <i class="bi bi-cart-plus"></i> Ajouter au panier
+          </button>  
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 md-3">
+      <div class="card text-center position-relative">
+        <span class="badge bg-danger badge-sale">-5%</span>
+        <a href="AMD-Ryzen-7-9800X3D-Setup-Game.jpg"><img src="AMD-Ryzen-7-9800X3D-Setup-Game.jpg" alt="AMD Ryzen 7"></a>
+        <div class="card-body">
+          <h6>AMD Ryzen 7</h6>
+          <p class="text-success fw-bold">2100 DH <del class="text-muted small">2200 DH</del></p>
+          <button class="btn btn-primary btn-sm w-100" onclick="addToCart('AMD Ryzen 7', 2100, 'AMD-Ryzen-7-9800X3D-Setup-Game.jpg', this)">
+            <i class="bi bi-cart-plus"></i> Ajouter au panier
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3">
+  <div class="col-6">
+    <div class="card text-center">
+      <a href="ROG-Strix-Z690-A-Gaming.png" ><img src="ROG-Strix-Z690-A-Gaming.png" class="card-img-top"></a>
+      <div class="card-body">
+        <h6>ASUS Z690</h6>
+        <p class="text-success fw-bold">1800 DH</p>
+          <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Asus Z690', 1800, 'ROG-Strix-Z690-A-Gaming.png', this)">
+          <i class="bi bi-cart-plus"></i> Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-6 md-3">
+      <div class="card text-center">
+        <a href="téléchargement (21).jpg"><img src="téléchargement (21).jpg" alt="Asus Vivobook"></a>
+        <div class="card-body">
+          <h6>Asus Vivobook</h6>
+          <p class="text-success fw-bold">4000 DH</p>
+          <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Asus Vivobook', 4000, 'téléchargement (21).jpg', this)">
+            <i class="bi bi-cart-plus"></i> Ajouter au panier
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 mb-3">
+      <div class="card text-center">
+        <a href="téléchargement (11).jpg"><img src="téléchargement (11).jpg" alt="NVIDIA RTX 3070" class="card-img-top"></a>
+        <div class="card-body">
+          <h6>NVIDIA RTX 3070</h6>
+          <p class="fw-bold text-success">4800 DH</p>
+          <button class="btn btn-primary btn-sm w-100" onclick="addToCart('NVIDIA RTX 3070', 4800, 'téléchargement (11).jpg', this)">
+          <i class="bi bi-cart-plus"></i> Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 md-3">
+      <div class="card text-center">
+        <a href="téléchargement (6).jpg"><img src="téléchargement (6).jpg" alt="Corsair 32GB DDR5"></a>
+        <div class="card-body">
+          <h6>Corsair 32GB DDR5</h6>
+          <p class="text-success fw-bold">1200 DH</p>
+          <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Corsair 32GB DDR5', 1200, 'téléchargement (6).jpg', this)">
+          <i class="bi bi-cart-plus"></i> Ajouter au panier
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 mb-3">
+      <div class="card text-center">
+        <a href="téléchargement (17).jpg"><img src="téléchargement (17).jpg" alt="PC Gamer i7" class="card-img-top"></a>
+        <div class="card-body">
+          <h6>PC Gamer i7</h6>
+          <p class="fw-bold text-success">7500 DH</p>
+          <button class="btn btn-primary btn-sm w-100" onclick="addToCart('PC Gamer i7', 7500,'téléchargement (17).jpg', this)">
+          <i class="bi bi-cart-plus"></i> Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 mb-3">
+      <div class="card text-center position-relative">
+        <span class="badge bg-danger position-absolute m-2">-10%</span>
+        <a href="6adff3072ff9c9ca19fc53f084c2f7e41c13a76b_100_100000593WOF_01.webp"><img src="6adff3072ff9c9ca19fc53f084c2f7e41c13a76b_100_100000593WOF_01.webp" alt="AMD Ryzen 5" class="card-img-top"></a>
+        <div class="card-body">
+          <h6>AMD Ryzen 5</h6>
+          <p class="fw-bold text-success mb-1">1350 DH</p>
+          <p class="text-muted small"><del>1500 DH</del></p>
+          <button class="btn btn-primary btn-sm w-100" onclick="addToCart('AMD Ryzen 5', 1350,'6adff3072ff9c9ca19fc53f084c2f7e41c13a76b_100_100000593WOF_01.webp', this)">
+          <i class="bi bi-cart-plus"></i> Ajouter au panier</button>        
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 mb-3">
+      <div class="card text-center position-relative">
+        <span class="badge bg-danger position-absolute m-2">-7%</span>
+        <a href="6455136cv1d.avif"><img src="6455136cv1d.avif" alt="Lenovo Legion 5" class="card-img-top"></a>
+        <div class="card-body">
+          <h6>Lenovo Legion 5</h6>
+          <p class="fw-bold text-success mb-1">7000 DH</p>
+          <p class="text-muted small"><del>7500 DH</del></p>
+          <button class="btn btn-primary btn-sm w-100" onclick="addToCart('Lenovo Legion 5', 7000,'6455136cv1d.avif', this)">
+            <i class="bi bi-cart-plus"></i> Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <footer>
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Info Shop. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function addToCart(name, price, image, button) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existingIndex = cart.findIndex(item => item.name === name);
+  if(existingIndex !== -1) {
+    cart[existingIndex].quantity = (cart[existingIndex].quantity || 1) + 1;
+  } else {
+    cart.push({name, price, image, quantity: 1});
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  button.innerHTML = '<i class="bi bi-cart-check"></i> Ajouté!';
+  setTimeout(() => {
+    button.innerHTML = '<i class="bi bi-cart-plus"></i> Ajouter au panier';
+  }, 1000);
+}
+</script>
+
+
+</body>
+</html>
