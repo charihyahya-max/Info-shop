@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recherche | Info Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
+    .card { border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,.05); margin-bottom: 20px; }
+    .card img { height: 160px; object-fit: contain; padding: 15px; }
+    h2 { margin: 20px 0; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Résultats de recherche</h2>
+  <div class="row" id="results"></div>
+</div>
+
+<script>
+  // الحصول على قيمة البحث من URL
+  const params = new URLSearchParams(window.location.search);
+  const query = params.get("q")?.toLowerCase() || "";
+
+  // جميع المنتجات من كل الصفحات
+  const allProducts = [
+    {name: "HP Pavilion", price: 2999, image: "HP_Pavilion16Laptop__AMD_NaturalSilver_desktop@2x.webp", url: "Laptop.html"},
+    {name: "AMD Ryzen 7", price: 2100, image: "AMD-Ryzen-7-9800X3D-Setup-Game.jpg", url: "cpu.html"},
+    {name: "Asus Vivobook", price: 4000, image: "téléchargement (21).jpg", url: "Laptop.html"},
+    {name: "Corsair 32GB DDR5", price: 1200, image: "téléchargement (6).jpg", url: "ram.html"},
+    {name: "AMD RX 6600", price: 2800, image: "téléchargement (10).jpg", url: "gpu.html"},
+    {name: "PC Gamer i7", price: 7500, image: "téléchargement (17).jpg", url: "Desktop.html"},
+    {name: "ASUS Z690", price: 1800, image: "Capture d'écran 2026-01-13 162004.png", url: "CARTE MERE.html"},
+    // زيد أي منتجات أخرى من كل الصفحات هنا
+  ];
+
+  const resultsContainer = document.getElementById("results");
+
+  // تصفية المنتجات حسب البحث
+  const results = allProducts.filter(p => p.name.toLowerCase().includes(query));
+
+  if (results.length === 0) {
+    resultsContainer.innerHTML = "<p>Aucun résultat trouvé.</p>";
+  } else {
+    resultsContainer.innerHTML = results.map(p => `
+      <div class="col-12 col-md-3">
+        <div class="card text-center">
+          <img src="${p.image}" class="card-img-top" alt="${p.name}">
+          <div class="card-body">
+            <h6>${p.name}</h6>
+            <p class="text-success fw-bold">${p.price} DH</p>
+            <a href="${p.url}" class="btn btn-primary btn-sm"><i class="bi bi-cart-plus"></i> Voir produit</a>
+          </div>
+        </div>
+      </div>
+    `).join("");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dell Laptops - Info Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    body { background: #fff; padding-bottom: 80px; font-family: Arial, sans-serif; }
+    .card { border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .card img { height: 150px; object-fit: contain; padding: 10px; }
+    del { color: red; }
+    .bottom-menu { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,.1); display: flex; justify-content: space-around; padding: 10px 0; }
+    .bottom-menu a, .bottom-menu i { color: #000; font-size: 24px; transition: color 0.3s; }
+    .bottom-menu a:hover, .bottom-menu i:hover { color: rgb(255, 38, 0); }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar bg-primary p-3">
+  <a class="navbar-brand text-white" href="Laptop.html">← Retour</a>
+</nav>
+
+<!-- Produits Dell -->
+<div class="container mt-4">
+  <h5>Dell Laptops</h5>
+  <div class="row g-3 mt-2">
+
+    <!-- Dell Inspiron 15 -->
+    <div class="col-6 mb-3">
+      <div class="card text-center position-relative">
+        <span class="badge bg-danger position-absolute m-2">-5%</span>
+        <img src="img1/4zu3_Dell_Inspiron_15_3501.jpg" alt="Dell Inspiron 15" class="card-img-top">
+        <div class="card-body">
+          <h6>Dell Inspiron 15</h6>
+          <p class="fw-bold text-success mb-1">3200 DH</p>
+          <p class="text-muted small"><del>3350 DH</del></p>
+          <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus"></i> Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dell XPS 13 -->
+    <div class="col-6 mb-3">
+      <div class="card text-center">
+        <img src="img/w2-scaled-e1725809910975.jpg" alt="Dell XPS 13" class="card-img-top">
+        <div class="card-body">
+          <h6>Dell XPS 13</h6>
+          <p class="fw-bold text-success">4500 DH</p>
+          <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus"></i> Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dell Latitude 7420 -->
+    <div class="col-6 mb-3">
+      <div class="card text-center position-relative">
+        <span class="badge bg-danger position-absolute m-2">-8%</span>
+        <img src="img/Dell-Latitude-7420.webp" alt="Dell Latitude 7420">
+        <div class="card-body">
+          <h6>Dell Latitude 7420</h6>
+          <p class="fw-bold text-success mb-1">5000 DH</p>
+          <p class="text-muted small"><del>5450 DH</del></p>
+          <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus"></i> Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dell Alienware M15 -->
+    <div class="col-6 mb-3">
+      <div class="card text-center">
+        <img src="img/dell-alienware-m15-r3-i7-10750h-32gb-512gb-ssd-pcie-15-6-uhd-oled-rtx-2070-8gb-win-10-home_39717_1.jpg" alt="Dell Alienware M15" class="card-img-top">
+        <div class="card-body">
+          <h6>Dell Alienware M15</h6>
+          <p class="fw-bold text-success">9000 DH</p>
+          <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus"></i> Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
